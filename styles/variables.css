@@ -1,1 +1,43 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --font-main: "Inter-Variable", "Inter", sans-serif;
+  --font-accent: "PressStart2P-Regular", sans-serif;
+
+  --font-weight-text: 410;
+  --font-weight-title: 715;
+
+  --title-size: clamp(3.1rem, -1.3077rem + 9.8462vw, 4rem);
+  --subtitle-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+  --heading-size: 18px;
+  --text-size: 18px;
+  --button-text-size: 14px;
+  --label-text-size: 14px;
+  --dialog-text-size: 14px;
+
+  --text-line-height: 121%;
+  --dialog-line-height: 150%;
+
+  --background-gradient: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+
+  --block-width: clamp(23.4375rem, 16.28rem + 30.53vw, 43.75rem);
+
+  --light-color: #fff;
+  --dark-color: #000;
+  --label-stroke-color: #fff;
+  --contour-color: #000;
+  --animation-fill-color: #FF0000;
+  --main-body-color-hover: #000;
+}
+
+@media (width <= 375px) {
+  :root {
+    --text-line-height: 116%;
+  }
+}

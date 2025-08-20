@@ -51,3 +51,8 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+picture {
+  display: block;
+  line-height: 0;
+}
