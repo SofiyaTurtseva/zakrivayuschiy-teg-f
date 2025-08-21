@@ -178,6 +178,8 @@
 }
 
 .button {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,10 +187,15 @@
 
   width: max-content;
   margin: 0 auto;
+  border: 2px solid var(--dark-color);
+  outline: none;
+  overflow: hidden;
 
   font-family: var(--font-accent);
   font-size: var(--button-text-size);
   background: var(--light-color);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .card__like-button {
@@ -216,24 +223,11 @@
   padding: 17px 20px;
 }
 
-.card__like-button, 
-.save-button {
-  position: relative;
-  z-index: 1;
-  border: 2px solid var(--dark-color);
-  outline: none;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.card__like-button:focus-visible, 
-.save-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--dark-color);
 }
 
-.card__like-button::before, 
-.save-button::before {
+.button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -247,8 +241,7 @@
   transform-origin: left;
 }
 
-.card__like-button:hover::before, 
-.save-button:hover::before {
+.button:hover::before {
   transform: scaleX(1);
 }
 
@@ -306,10 +299,6 @@
   .card__content {
     gap: 24px;
     padding: 23px 25px;
-  }
-
-  .card__like-button {
-    padding: 12px 0;
   }
 
   .button.save-button {
